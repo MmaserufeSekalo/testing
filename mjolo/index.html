@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I love you</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: monospace;
+        font-size: larger;
+        background: linear-gradient(
+          112.1deg,
+          rgb(211, 217, 235) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+      }
+      h1,
+      h2 {
+        color: aliceblue;
+        text-align: center;
+        margin: 20px;
+      }
+      .btn-primary {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+     .change{
+        background: linear-gradient(
+          180.8deg,
+          rgb(1, 10, 130) 6.9%,
+          rgb(73, 6, 70) 73.2%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Yhoo Baby</h1>
+      <h2>What's up?</h2>
+      <button class="btn btn-primary" id="message1">
+        Click here for a message!
+      </button>
+    </div>
+    <script>
+      function message1() {
+        let howAreYou = prompt("How are you?");
+        if (howAreYou.length > 1) {
+          let dailyMessage = document.querySelector("body");
+          dailyMessage.innerHTML =
+            "Agh baby, I could not crack the code, I have however saught help from other programmers online. I hope I get a solution tomorrow! It is going to be the sheds soon. 😫 I love you";
+          let cont = document.querySelector("#container");
+          cont.classList.add("change");
+        }
+      }
+
+      let button1 = document.querySelector("#message1");
+      button1.addEventListener("click", message1);
+    </script>
+  </body>
+</html>
